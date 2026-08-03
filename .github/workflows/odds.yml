@@ -1,0 +1,37 @@
+name: Agente de odds
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'   # corre a cada 15 minutos
+  workflow_dispatch:          # permite correr manualmente pelo site do GitHub, para testar
+
+jobs:
+  correr-agente:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descarregar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: Preparar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar a dependência requests
+        run: pip install requests
+
+      - name: Correr o script do agente
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python agente_odds_movimento.py
+
+      - name: Guardar o estado atualizado de volta no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add estado_odds.json alertas_movimento.csv
+          git diff --quiet --cached || git commit -m "Atualizar estado das odds"
+          git push
+
