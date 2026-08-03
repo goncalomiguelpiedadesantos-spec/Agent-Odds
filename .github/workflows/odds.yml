@@ -1,5 +1,8 @@
 name: Agente de odds
 
+permissions:
+  contents: write   # necessário para o passo final poder gravar o estado atualizado
+
 on:
   schedule:
     - cron: '*/15 * * * *'   # corre a cada 15 minutos
@@ -34,4 +37,3 @@ jobs:
           git add estado_odds.json alertas_movimento.csv
           git diff --quiet --cached || git commit -m "Atualizar estado das odds"
           git push
-
