@@ -3,10 +3,17 @@ name: Agente de odds
 permissions:
   contents: write   # necessário para o passo final poder gravar o estado atualizado
 
+# Nota: o agendamento nativo do GitHub (schedule) foi removido de propósito.
+# O disparo é feito externamente pelo cron-job.org, que chama o evento
+# workflow_dispatch abaixo a cada 15 minutos, de forma fiável. Ter os dois
+# em simultâneo estava a causar execuções sobrepostas e cancelamentos.
+
 on:
-  schedule:
-    - cron: '*/15 * * * *'   # corre a cada 15 minutos
-  workflow_dispatch:          # permite correr manualmente pelo site do GitHub, para testar
+  workflow_dispatch:   # disparado pelo cron-job.org (e também manualmente, se quiseres testar)
+
+concurrency:
+  group: agente-odds
+  cancel-in-progress: false   # se uma execução ainda estiver a correr, a próxima espera em vez de sobrepor
 
 jobs:
   correr-agente:
@@ -40,4 +47,3 @@ jobs:
           fi
           git diff --quiet --cached || git commit -m "Atualizar estado das odds"
           git push
-
