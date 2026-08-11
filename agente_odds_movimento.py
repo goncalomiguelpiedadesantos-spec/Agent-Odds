@@ -52,6 +52,19 @@ API_KEY = os.environ.get("ODDS_API_KEY", "COLA_AQUI_A_TUA_API_KEY")
 # destes grupos é descoberta automaticamente a cada execução).
 GRUPOS_DESPORTO = ["Soccer", "Tennis"]
 
+# Em vez de monitorizar TODAS as ligas de futebol ativas (o que esgotava a
+# quota gratuita da API em poucas horas), fixamos só as que interessam.
+LIGAS_FUTEBOL_FIXAS = [
+    "soccer_portugal_primeira_liga",
+    "soccer_spain_la_liga",
+    "soccer_epl",
+]
+
+# O ténis muda de torneio em torneio (não dá para fixar nomes), por isso
+# continua a descoberta automática — mas limitamos a quantos torneios
+# simultâneos consultamos, para controlar o consumo de créditos.
+MAX_TORNEIOS_TENIS = 2
+
 MARKET = "h2h"      # vencedor do evento
 REGIONS = "eu"       # bookmakers da região Europa
 
@@ -71,7 +84,7 @@ ODD_MINIMA_VALIDA = 1.15
 # tiver mais do que isto (em minutos), não é usada para comparar — trata-se
 # como se fosse a primeira vez a ver essa odd (evita comparar com dados
 # demasiado velhos, ex: de há vários dias).
-MAX_IDADE_MINUTOS = 120
+MAX_IDADE_MINUTOS = 600   # ~10h, cobre o novo intervalo de 8h entre execuções, com margem
 
 STATE_FILE = "estado_odds.json"
 LOG_FILE = "alertas_movimento.csv"
@@ -86,7 +99,7 @@ TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "COLA_AQUI_O_TEU_CHAT_ID")
 # Útil agora para confirmares a ligação ao Telegram; depois de confirmado,
 # e principalmente quando isto correr automaticamente de x em x minutos,
 # muda para False (senão recebes uma mensagem a cada execução, o que é spam).
-ENVIAR_HEARTBEAT = True
+ENVIAR_HEARTBEAT = False
 
 # ────────────────────────────────────────────────────────────
 
@@ -109,17 +122,28 @@ def enviar_telegram(mensagem: str):
 
 
 def descobrir_campeonatos_ativos() -> list:
-    """Devolve as sport_keys atualmente ativas dentro dos GRUPOS_DESPORTO."""
+    """
+    Devolve a lista de campeonatos a consultar: as ligas de futebol fixas
+    definidas em LIGAS_FUTEBOL_FIXAS, mais até MAX_TORNEIOS_TENIS torneios
+    de ténis atualmente ativos (esses sim, descobertos automaticamente,
+    porque mudam de torneio em torneio).
+    """
     url = "https://api.the-odds-api.com/v4/sports/"
     params = {"apiKey": API_KEY, "all": "false"}
     resp = requests.get(url, params=params, timeout=15)
     if resp.status_code != 200:
         print(f"[erro] não consegui listar desportos ativos: {resp.status_code} {resp.text[:200]}")
-        return []
+        return list(LIGAS_FUTEBOL_FIXAS)  # tenta continuar só com o futebol fixo
+
     todos = resp.json()
-    ativos = [d["key"] for d in todos if d.get("group") in GRUPOS_DESPORTO and d.get("active")]
-    print(f"Campeonatos ativos encontrados agora: {len(ativos)} -> {ativos}")
-    return ativos
+    tenis_ativos = [d["key"] for d in todos if d.get("group") == "Tennis" and d.get("active")]
+    tenis_selecionados = tenis_ativos[:MAX_TORNEIOS_TENIS]
+
+    campeonatos = list(LIGAS_FUTEBOL_FIXAS) + tenis_selecionados
+    print(f"Campeonatos a consultar nesta execução ({len(campeonatos)}): {campeonatos}")
+    if len(tenis_ativos) > MAX_TORNEIOS_TENIS:
+        print(f"[info] havia {len(tenis_ativos)} torneios de ténis ativos, limitado aos primeiros {MAX_TORNEIOS_TENIS}.")
+    return campeonatos
 
 
 def buscar_odds(sport: str) -> list:
@@ -293,3 +317,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
