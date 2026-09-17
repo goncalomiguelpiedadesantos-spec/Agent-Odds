@@ -1258,3 +1258,8 @@ timestamp,evento,resultado,tipo,detalhes
 2026-09-16T21:01:04.881327+00:00,Sevilla vs Barcelona,Draw,DRIFT,Winamax (DE): 7.0 -> 7.75 (subida 10.7%)
 2026-09-16T21:01:04.881766+00:00,Atlético Madrid vs Real Madrid,Atlético Madrid,STEAM,Matchbook: 4.3 -> 3.85 (queda 10.5%) | Betfair: 4.3 -> 3.85 (queda 10.5%)
 2026-09-16T21:01:05.384869+00:00,Manchester United vs Tottenham Hotspur,Draw,DRIFT,Betfair: 3.85 -> 2.3 (queda 40.3%)
+2026-09-17T05:01:08.181815+00:00,Sporting Lisbon vs Arouca,Arouca,STEAM,PMU (FR): 11.0 -> 12.5 (subida 13.6%) | Unibet (SE): 11.0 -> 12.5 (subida 13.6%) | Unibet (NL): 11.0 -> 12.5 (subida 13.6%) | Nordic Bet: 14.5 -> 12.5 (queda 13.8%) | BetOnline.ag: 12.5 -> 10.0 (queda 20.0%) | 888sport: 13.0 -> 11.0 (queda 15.4%) | William Hill: 13.0 -> 11.0 (queda 15.4%)
+2026-09-17T05:01:08.595360+00:00,Vitória SC vs Moreirense FC,Moreirense FC,DRIFT,Betfair: 7.0 -> 5.6 (queda 20.0%)
+2026-09-17T05:01:08.759021+00:00,Sevilla vs Barcelona,Sevilla,STEAM,Tipico: 12.0 -> 14.0 (subida 16.7%) | BetOnline.ag: 14.25 -> 16.25 (subida 14.0%) | Betfair: 14.5 -> 16.5 (subida 13.8%)
+2026-09-17T05:01:09.160807+00:00,Sevilla vs Barcelona,Draw,STEAM,Tipico: 7.0 -> 7.8 (subida 11.4%) | Matchbook: 7.6 -> 8.4 (subida 10.5%) | Nordic Bet: 5.7 -> 6.6 (subida 15.8%)
+2026-09-17T05:01:09.874408+00:00,Cristina Bucsa vs Sara Bejlek,Cristina Bucsa,STEAM,888sport: 2.5 -> 2.75 (subida 10.0%) | Matchbook: 2.58 -> 2.88 (subida 11.6%) | Betfair: 2.56 -> 2.84 (subida 10.9%) | William Hill: 2.5 -> 2.75 (subida 10.0%)
