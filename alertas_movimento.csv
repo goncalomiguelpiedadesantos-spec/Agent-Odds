@@ -2186,3 +2186,8 @@ timestamp,evento,resultado,tipo,detalhes
 2026-10-17T21:01:01.208406+00:00,Barcelona vs Real Madrid,Draw,DRIFT,Betfair: 5.7 -> 6.6 (subida 15.8%)
 2026-10-17T21:01:01.442102+00:00,Arsenal vs Everton,Everton,DRIFT,Betfair: 3.3 -> 9.4 (subida 184.8%)
 2026-10-17T21:01:01.442819+00:00,Hull City vs Brentford,Hull City,DRIFT,Betfair: 5.0 -> 4.5 (queda 10.0%)
+2026-10-18T05:00:59.210195+00:00,Santa Clara vs Benfica,Santa Clara,DRIFT,Betfair: 11.0 -> 9.8 (queda 10.9%)
+2026-10-18T05:00:59.348939+00:00,Real Madrid vs Sevilla,Sevilla,DRIFT,Betclic (FR): 10.0 -> 11.25 (subida 12.5%) | Betfair: 13.0 -> 11.5 (queda 11.5%)
+2026-10-18T05:00:59.349787+00:00,Atlético Madrid vs Deportivo La Coruña,Deportivo La Coruña,STEAM,1xBet: 14.9 -> 13.1 (queda 12.1%) | Tipico: 12.0 -> 10.5 (queda 12.5%) | Marathon Bet: 14.0 -> 12.5 (queda 10.7%)
+2026-10-18T05:01:00.031826+00:00,Sevilla vs CA Osasuna,Draw,DRIFT,Betfair: 1.76 -> 3.5 (subida 98.9%)
+2026-10-18T05:01:00.163995+00:00,Nottingham Forest vs Arsenal,Nottingham Forest,STEAM,1xBet: 5.78 -> 6.5 (subida 12.5%) | Codere (IT): 5.4 -> 6.0 (subida 11.1%) | Marathon Bet: 5.7 -> 6.4 (subida 12.3%) | Betfair: 6.4 -> 7.2 (subida 12.5%) | Tipico: 6.0 -> 7.0 (subida 16.7%) | Pinnacle: 6.03 -> 6.85 (subida 13.6%) | Nordic Bet: 5.6 -> 6.2 (subida 10.7%) | Betsson: 5.58 -> 6.24 (subida 11.8%) | BetOnline.ag: 5.9 -> 6.6 (subida 11.9%) | Matchbook: 6.4 -> 7.2 (subida 12.5%) | BetAnything: 5.9 -> 6.6 (subida 11.9%)
