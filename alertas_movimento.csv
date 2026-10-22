@@ -2363,3 +2363,8 @@ timestamp,evento,resultado,tipo,detalhes
 2026-10-22T13:01:07.326294+00:00,Barcelona vs Alavés,Alavés,DRIFT,Tipico: 19.0 -> 22.0 (subida 15.8%)
 2026-10-22T13:01:07.326832+00:00,Elche CF vs Valencia,Valencia,DRIFT,Betfair: 1.37 -> 2.84 (subida 107.3%)
 2026-10-22T13:01:07.596280+00:00,Arsenal vs Everton,Everton,STEAM,Unibet (SE): 9.5 -> 8.0 (queda 15.8%) | LeoVegas (SE): 8.5 -> 7.5 (queda 11.8%) | Unibet (NL): 9.5 -> 8.0 (queda 15.8%) | BetOnline.ag: 8.99 -> 8.0 (queda 11.0%) | BetAnything: 8.99 -> 8.0 (queda 11.0%)
+2026-10-22T21:01:02.760632+00:00,Sporting Lisbon vs Académico de Viseu,Académico de Viseu,DRIFT,Betfair: 11.0 -> 13.5 (subida 22.7%)
+2026-10-22T21:01:02.760765+00:00,Santa Clara vs Benfica,Santa Clara,STEAM,Betsson: 8.8 -> 7.8 (queda 11.4%) | Nordic Bet: 8.8 -> 7.8 (queda 11.4%) | Betfair: 10.5 -> 9.4 (queda 10.5%)
+2026-10-22T21:01:03.353190+00:00,Alavés vs Málaga,Málaga,STEAM,Coolbet: 4.9 -> 5.5 (subida 12.2%) | Betclic (FR): 4.6 -> 5.1 (subida 10.9%) | Codere (IT): 4.8 -> 5.4 (subida 12.5%)
+2026-10-22T21:01:03.741834+00:00,Athletic Bilbao vs Getafe,Getafe,DRIFT,William Hill: 5.0 -> 5.5 (subida 10.0%)
+2026-10-22T21:01:03.742615+00:00,Barcelona vs Alavés,Alavés,STEAM,Nordic Bet: 22.0 -> 19.0 (queda 13.6%) | Betsson: 22.0 -> 19.0 (queda 13.6%)
