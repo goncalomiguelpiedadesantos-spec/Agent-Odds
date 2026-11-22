@@ -3043,3 +3043,7 @@ timestamp,evento,resultado,tipo,detalhes
 2026-11-22T06:00:55.988922+00:00,Brentford vs Everton,Brentford,DRIFT,GTbets: 2.05 -> 2.29 (subida 11.7%)
 2026-11-22T06:00:55.989786+00:00,Everton vs Liverpool,Draw,DRIFT,Betfair: 3.75 -> 3.35 (queda 10.7%)
 2026-11-22T06:00:55.990785+00:00,Liverpool vs Sunderland,Sunderland,DRIFT,1xBet: 7.9 -> 6.73 (queda 14.8%)
+2026-11-22T14:00:57.110428+00:00,Getafe vs Atlético Madrid,Getafe,DRIFT,Winamax (FR): 5.75 -> 6.5 (subida 13.0%)
+2026-11-22T14:00:57.274850+00:00,Leeds United vs Coventry City,Coventry City,STEAM,888sport: 5.0 -> 5.5 (subida 10.0%) | William Hill: 5.0 -> 5.5 (subida 10.0%)
+2026-11-22T14:00:57.693933+00:00,Everton vs Liverpool,Draw,DRIFT,Betfair: 3.35 -> 3.75 (subida 11.9%)
+2026-11-22T14:00:57.695699+00:00,Newcastle United vs Manchester United,Manchester United,DRIFT,Betfair: 1.56 -> 2.06 (subida 32.1%)
