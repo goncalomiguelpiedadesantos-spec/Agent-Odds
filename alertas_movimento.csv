@@ -3090,3 +3090,7 @@ timestamp,evento,resultado,tipo,detalhes
 2026-11-23T14:01:00.550509+00:00,Hull City vs Nottingham Forest,Hull City,DRIFT,Tipico: 3.7 -> 4.1 (subida 10.8%)
 2026-11-23T14:01:00.550767+00:00,Liverpool vs Sunderland,Sunderland,DRIFT,Betfair: 4.9 -> 6.6 (subida 34.7%)
 2026-11-23T14:01:00.550795+00:00,Liverpool vs Sunderland,Draw,DRIFT,Betfair: 4.0 -> 4.6 (subida 15.0%)
+2026-11-23T22:01:00.050339+00:00,Elche CF vs Atlético Madrid,Elche CF,STEAM,Tipico: 5.7 -> 6.5 (subida 14.0%) | Betfair: 5.8 -> 6.4 (subida 10.3%) | Matchbook: 5.8 -> 6.4 (subida 10.3%) | Everygame: 5.0 -> 5.5 (subida 10.0%)
+2026-11-23T22:01:00.702150+00:00,Nottingham Forest vs Chelsea,Chelsea,STEAM,BetOnline.ag: 2.5 -> 2.75 (subida 10.0%) | BetAnything: 2.5 -> 2.75 (subida 10.0%)
+2026-11-23T22:01:01.147210+00:00,Everton vs Liverpool,Everton,STEAM,Pinnacle: 3.67 -> 4.17 (subida 13.6%) | 1xBet: 3.51 -> 4.0 (subida 14.0%) | Marathon Bet: 3.42 -> 3.9 (subida 14.0%) | Unibet (SE): 3.7 -> 4.1 (subida 10.8%) | Unibet (NL): 3.7 -> 4.1 (subida 10.8%) | PMU (FR): 3.35 -> 3.7 (subida 10.4%) | Betsson: 3.53 -> 3.89 (subida 10.2%) | Everygame: 3.4 -> 3.85 (subida 13.2%) | BetOnline.ag: 3.6 -> 4.0 (subida 11.1%)
+2026-11-23T22:01:01.585247+00:00,Brighton and Hove Albion vs Newcastle United,Newcastle United,DRIFT,William Hill: 5.0 -> 5.5 (subida 10.0%)
